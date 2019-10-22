@@ -11,6 +11,13 @@ class RepresaTest {
 	
 	@Test
 	void testGetVolumeTotal() {
-		assertEquals("O volume total deve ser a soma do volume técnico + volume util ", represa.CalcularVolumeTotal(5, 5), 10.0, 1.0);
+		represa.setReservaTecnica(500.0);
+		represa.setVolumeUtil(500.0);
+		
+		double reservaTecnica = represa.getReservaTecnica();
+		double volumeUtil = represa.getVolumeUtil();
+		
+		assertEquals("O volume total deve ser a soma do volume técnico e volume útil ", represa.CalcularVolumeTotal(reservaTecnica, volumeUtil), 1000.0, 1.0);
 	}
 }
+
