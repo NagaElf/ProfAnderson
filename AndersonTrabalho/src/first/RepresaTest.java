@@ -6,18 +6,19 @@ import org.junit.jupiter.api.Test;
 
 public class RepresaTest {
 	
-	Represa represa = new Represa("Represa Goiás", "Sistema moderno");	
-//	Represa represa2;
-//	
-//	@Before
-//	public void setUp() throws Exception {
-//		represa2 = new Represa("Alagoas", "Sistema antigo");
-//	}
-//	
-//	@Test
-//	public void testEquals() {
-//		assertEquals("Alagoas, Sistema antigo", represa2, new Represa("Alagoas", "Sistema antigo"));
-//	}
+	Represa represa = new Represa("Represa Goiás", "Sistema moderno");
+	Represa represa2;
+	
+	@Before
+	public void setUp() throws Exception {
+		represa2 = new Represa("Alagoas", "Sistema moderno");
+	}
+
+	@Test
+	public void testEquals(){
+		Represa represa3 = new Represa("Alagoas", "Sistema moderno");
+		assertEquals("Criação da represa", represa3, new Represa("Alagoas", "Sistema moderno"));
+	}
 	
 	@Test
 	void testGetVolumeTotal() {

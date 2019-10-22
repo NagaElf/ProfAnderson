@@ -12,7 +12,6 @@ public class Represa {
 	public Represa(String nomeRepresa, String sistemaRepresa) {
 		this.nomeRepresa = nomeRepresa;
 		this.sistemaRepresa = sistemaRepresa;
-		this.sistemaAbastecimento = sistemaAbastecimento;
 	}
 	
 	public String getNomeRepresa() {
@@ -70,5 +69,29 @@ public class Represa {
 				"%n Volume total: "+this.getVolumeTotal());
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+
+	if (this == obj)
+
+	return true;
+
+	if (obj == null)
+
+	return false;
+
+	if (getClass() != obj.getClass())
+
+	return false;
+
+	Represa other = (Represa) obj;
+
+	if (nomeRepresa != other.nomeRepresa)
+
+	return false;
+
+	return true;
+	
+}
 }
 
