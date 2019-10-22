@@ -1,13 +1,23 @@
 package first;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-class RepresaTest {
-
-	Represa represa = new Represa();
+public class RepresaTest {
+	
+	Represa represa = new Represa("Represa Goiás", "Sistema moderno");	
+//	Represa represa2;
+//	
+//	@Before
+//	public void setUp() throws Exception {
+//		represa2 = new Represa("Alagoas", "Sistema antigo");
+//	}
+//	
+//	@Test
+//	public void testEquals() {
+//		assertEquals("Alagoas, Sistema antigo", represa2, new Represa("Alagoas", "Sistema antigo"));
+//	}
 	
 	@Test
 	void testGetVolumeTotal() {
